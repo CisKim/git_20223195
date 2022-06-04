@@ -43,4 +43,12 @@ GNU에서의 옵션 표기는 두개의 대시(--)를 사용합니다. 따라서
 
 한 예로, 옵션 중 'a','-a'가 있는데 이 둘은 다릅니다.
 ```
+|명령어 내용설명|출력 화면|
+|:---:|---|
+|ps: pid,cmd 등 기본적인 내용만 출력된다, 옵션 없이는 잘 사용하지 않는다.|![image](https://user-images.githubusercontent.com/106826719/172027193-9fdc6b67-9077-4305-8ebe-9a5c800fa98c.png)|
+|-e: 모든 프로세스를 출력해 준다.|![image](https://user-images.githubusercontent.com/106826719/172027243-ad8f52b0-41a9-4a0c-8b0c-26810981e8bd.png)|
+|-f: 풀 포맷으로 보여준다.(uid(user ID), pid(process ID), ppid(parent ID), TTY(프로세스와 연결된 터미널) 등을 표시해준다.)|![image](https://user-images.githubusercontent.com/106826719/172027243-ad8f52b0-41a9-4a0c-8b0c-26810981e8bd.png)|
+|-l: 긴 포맷으로 보여준다(풀 포맷정보 외에 F(프로세스 플래그), S(프로세스 상태), PRI(우선순위) 등 더 많은 정보를 보여준다.)|![image](https://user-images.githubusercontent.com/106826719/172027285-03ca49ca-885d-406a-8a9b-0e18251bba10.png)|
+|p,-p: 특정 PID의 프로세스를 보여준다.|
+|-u: 특정 사용자의 프로세스를 보여준다.|
 
