@@ -31,7 +31,6 @@
 **"ps 명령어"**
 
 ![image](https://user-images.githubusercontent.com/106826719/172026249-27b4d70e-57a0-46c3-88f0-a66ee35bd528.png)
-
 ```
 * ps명령어는 현재 실행중인 프로세스 목록과 상태를 보여줍니다. 
 
@@ -51,4 +50,37 @@
 |-l: 긴 포맷으로 보여준다(풀 포맷정보 외에 F(프로세스 플래그), S(프로세스 상태), PRI(우선순위) 등 더 많은 정보를 보여준다.)|![image](https://user-images.githubusercontent.com/106826719/172027285-03ca49ca-885d-406a-8a9b-0e18251bba10.png)|
 |p,-p: 특정 PID의 프로세스를 보여준다.|![image](https://user-images.githubusercontent.com/106826719/172030626-fb1f59e0-9f72-4833-9160-d181ba8e574f.png)|
 |-u: 특정 사용자의 프로세스를 보여준다.|![image](https://user-images.githubusercontent.com/106826719/172030632-c90cb6d0-c763-475a-b25e-7b174574b24d.png)|
+
+**"jobs 명령어"**
+
+![image](https://user-images.githubusercontent.com/106826719/172031225-4957fb88-d46b-45ab-9d67-b35c9f4bb0e1.png)
+
+
+```
+* 리눅스 명령어 jobs는 작업이 중지된 상태
+
+* 백그라운드로 진행 중인 작업 상태
+
+* 변경 되었지만 보고되지 않은 상태 등을 표시하는 명령어다.
+```
+|명령어 내용설명|출력 화면|
+|:---:|---|
+|jobs: 해당 명령어를 사용하면 실행중인 현 재환경의 작업 상태를 보여주는 백그라운드 목록이 나타납니다.|![image](https://user-images.githubusercontent.com/106826719/172031257-3352259e-e205-40a7-a7d4-7d6951c000d1.png)|
+|-l: 프로세스 그룹 ID를 state 필드 앞에 출력|![image](https://user-images.githubusercontent.com/106826719/172031290-38c815bd-228f-409a-9062-a9798025aa61.png)|
+|-p: 각 프로세스 ID에 대해 한 행씩 출력|![image](https://user-images.githubusercontent.com/106826719/172031311-5d38f087-4b82-49cf-a3b4-a5655eb58f4b.png)|
+
+|상태|설명|
+|:---:|---|
+|Running|작업이 일시 중단되지 않았고 종료하지 않고 계속 진행 중임을 뜻한다.|
+|Done|작업이 완료되어 0을 반환하고 종료했음을 뜻한다.|
+|Done (code)|작업이 정상적으로 완료했으며, 0이 아닌 코드를 반환했음을 뜻한다.|
+|Stopped|작업이 일시 중단됨을 뜻한다.|
+|Stopped (SIGTSTP)|SIGTSTP 신호가 작업을 일시 중단했음을 뜻한다.|
+|Stopped (SIGSTOP)|SIGSTOP 신호가 일시 중단했음을 뜻한다.|
+|Stopped (SIGTTIN)|SIGTTIN 신호가 작업을 일시 중단했음을 뜻한다.|
+|Stopped (SIGTTOU)|SIGTTOU 신호가 작업을 일시 중단했음을 뜻한다.|
+
+* 다음과 같이 jobs -p %v 다음과 같이 %를 붙이고 첫단어를 골라 붙여주면 v로 시작하는 모든 프로세스 ID를 확인할 수 있다.
+
+
 
